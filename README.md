@@ -136,3 +136,79 @@ We have provided a comprehensive example of collecting IMU data and applying a K
 ### Conclusion
 
 Collecting raw data from the IMU and applying a Kalman filter is crucial for accurate and reliable sensor measurements in our robotic system. By implementing this process, we can significantly reduce noise and obtain precise data for our Space Station project. For the complete code and detailed instructions, please refer to the [repository](https://github.com/Shivansh-gupta2005/Space_Station_snt-.git).
+
+## Dual Booting Windows and Ubuntu 20.04
+
+In this section, we provide a step-by-step guide to set up a dual-boot system with Windows and Ubuntu 20.04. This setup allows you to leverage the benefits of both operating systems, facilitating development and testing for the Space Station project.
+
+### Overview
+
+Dual booting enables you to have both Windows and Ubuntu installed on the same computer, allowing you to choose which operating system to boot into. This setup is particularly useful for robotics projects where you might need the development tools available on both platforms.
+
+### Prerequisites
+
+- A computer with Windows installed.
+- A USB drive with at least 8GB capacity.
+- Ubuntu 20.04 ISO file (download from [ubuntu.com](https://ubuntu.com/download/desktop)).
+- Backup of important data.
+
+### Steps to Dual Boot Windows and Ubuntu 20.04
+
+1. **Backup Your Data:**
+   - Ensure you have backups of all important data before proceeding.
+
+2. **Create a Bootable USB Drive:**
+   - Download and install [Rufus](https://rufus.ie/) on Windows.
+   - Use Rufus to create a bootable USB drive with the Ubuntu 20.04 ISO file.
+
+3. **Create a Partition for Ubuntu:**
+   - Open Disk Management in Windows.
+   - Shrink the volume of your main partition to create free space for Ubuntu (at least 20GB recommended).
+   - Leave the space unallocated.
+
+4. **Disable Fast Startup in Windows:**
+   - Go to Control Panel > Power Options > Choose what the power buttons do.
+   - Click on "Change settings that are currently unavailable."
+   - Uncheck "Turn on fast startup" and save changes.
+
+5. **Boot from the USB Drive:**
+   - Restart your computer and boot from the USB drive (you may need to change the boot order in BIOS/UEFI settings).
+
+6. **Install Ubuntu 20.04:**
+   - Select "Install Ubuntu" when prompted.
+   - Follow the installation steps. When asked about installation type, select "Something else."
+   - Choose the unallocated space you created and set up the following partitions:
+     - **Root (`/`)**: At least 15GB, ext4 filesystem.
+     - **Swap**: Optional, typically 1-2 times your RAM size.
+     - **Home (`/home`)**: Remaining space, ext4 filesystem (optional).
+   - Proceed with the installation.
+
+7. **Configure Bootloader:**
+   - The installer will automatically detect Windows and configure the GRUB bootloader to allow selection between Windows and Ubuntu at startup.
+
+8. **Complete Installation:**
+   - Finish the installation and restart your computer.
+   - You should see the GRUB menu, allowing you to choose between Windows and Ubuntu.
+
+### Post-Installation Steps
+
+1. **Update Ubuntu:**
+   - After logging into Ubuntu, open a terminal and run:
+     ```sh
+     sudo apt update
+     sudo apt upgrade
+     ```
+
+2. **Install Essential Software:**
+   - Install any necessary development tools and libraries required for your project.
+
+### Troubleshooting
+
+- **Bootloader Issues:** If you don't see the GRUB menu, you may need to repair the bootloader using a live USB session.
+- **Partitioning Errors:** Double-check the partition sizes and filesystems during the installation process.
+
+### Conclusion
+
+Dual booting Windows and Ubuntu 20.04 provides a flexible development environment, allowing you to leverage the strengths of both operating systems. By following this guide, you can set up a dual-boot system to facilitate your work on the Space Station project. For additional details and troubleshooting, please refer to the [official Ubuntu documentation](https://help.ubuntu.com/community/WindowsDualBoot).
+
+
