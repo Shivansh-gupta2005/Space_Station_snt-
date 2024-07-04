@@ -10,6 +10,7 @@
 - [Integrating Arduino IDE and ROS](#integrating-arduino-ide-and-ros)
 - [Controlling of TESTBOT](#controlling-of-testbot)
 - [License Info](#license-info)
+- [Conclusion](#conclusion)
 
 - ## Introduction
 
@@ -515,3 +516,85 @@ The `velocity_distributor_node` utilizes data from the IMU (Inertial Measurement
 ### Conclusion
 
 The `velocity_distributor_node` is essential for controlling the velocity of the 4-wheel TESTBOT based on IMU data, ensuring precise and stable movement in the Space Station project. By implementing this node and integrating it with ROS, you can effectively harness sensor data to achieve desired robotic behaviors and navigation capabilities. For further details and updates, please refer to your project's documentation and the [official ROS documentation](http://wiki.ros.org/ROS/StartGuide).
+
+## License Information
+
+In this section, we provide details about the licensing terms and conditions for the software components used in the Space Station project. Understanding and adhering to these terms is essential for using, modifying, or distributing any part of the project.
+
+### Software License
+
+The software components, including code, scripts, and configuration files, in the Space Station project are licensed under the **MIT License** unless otherwise specified. The MIT License is a permissive open-source license that allows you to freely use, modify, and distribute the software, provided that the original copyright notice and license terms are included in all copies or substantial portions of the software.
+
+#### MIT License Summary
+
+```
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### How to Credit
+
+When attributing the Space Station project, please include the following information:
+
+- Mention the project name and authors.
+- Provide a copy of the MIT License included in the software.
+
+### Conclusion
+
+By adhering to the MIT License terms, you ensure proper use, modification, and distribution of the software components in the Space Station project. If you have any questions or need further clarification regarding licensing, please refer to the MIT License or contact the project maintainers.
+
+
+## Conclusion
+
+Thank you for exploring the Space Station project README. This document has provided an overview of the project's components and how to set them up, integrate them, and control them effectively. By leveraging ROS (Robot Operating System), Arduino IDE, and various sensors, we aim to create a versatile platform for robotics development.
+
+### How You Can Contribute
+
+Your contributions are valuable to enhancing the Space Station project:
+
+- **Fork the Repository:** Start your own version of the project to experiment or improve existing features.
+- **Pull Requests:** Submit improvements, bug fixes, or new features to be reviewed and integrated into the main project.
+- **Feedback:** Share your thoughts, suggestions, or report issues to help us improve and refine the project.
+
+### Get Started
+
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/your-repo/space-station.git
+   cd space-station/
+   ```
+
+2. **Explore and Experiment:**
+   - Set up your development environment.
+   - Follow the README instructions to integrate components and test functionalities.
+   - Experiment with new ideas or enhancements.
+
+### Stay Connected
+
+- Join our community to discuss ideas, ask questions, and collaborate with other developers and enthusiasts.
+- Follow project updates and contribute to ongoing discussions to shape the future of the Space Station project.
+
+### License
+
+The software components in this project are licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+---
+
+By forking the repository, submitting pull requests, and engaging in discussions, you contribute to making the Space Station project better. Your involvement drives innovation and improvements, ensuring that our robotic platform continues to evolve and meet the challenges of modern robotics applications. We look forward to your contributions and thank you for your interest in our project.
