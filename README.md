@@ -81,4 +81,58 @@ Tuning the PID parameters (Kp, Ki, Kd) is crucial for optimal performance. Here 
 
 ### Conclusion
 
-Accurate position and velocity control of DC motors are vital for the precision and reliability of our robotic system. By carefully tuning PID controllers and ensuring proper feedback mechanisms, we can achieve the desired performance in our Space Station project. For the complete code and detailed instructions, please refer to the [repository]([https://github.com/your-repo/space-station](https://github.com/Shivansh-gupta2005/Space_Station_snt-.git)).
+Accurate position and velocity control of DC motors are vital for the precision and reliability of our robotic system. By carefully tuning PID controllers and ensuring proper feedback mechanisms, we can achieve the desired performance in our Space Station project. For the complete code and detailed instructions, please refer to the [repository](https://github.com/Shivansh-gupta2005/Space_Station_snt-.git).
+
+## Collecting Raw Data of IMU and Applying Kalman Filter
+
+In this section, we focus on collecting raw data from an Inertial Measurement Unit (IMU) and applying a Kalman filter to improve the accuracy of our measurements by reducing noise.
+
+### Overview
+
+An IMU provides critical data about the orientation and movement of our robotic system. However, the raw data from an IMU can be noisy. To address this, we use a Kalman filter, which is an algorithm that estimates the true state of a system from noisy measurements.
+
+### Components
+
+- **IMU Sensor:** Used to measure acceleration, angular velocity, and sometimes magnetic field.
+- **Microcontroller:** For reading the IMU data and implementing the Kalman filter.
+- **Kalman Filter:** An algorithm to filter out noise and provide more accurate measurements.
+
+### Steps to Collect and Filter IMU Data
+
+1. **Set Up Hardware:**
+   - Connect the IMU sensor to the microcontroller.
+   - Ensure proper power supply and connections.
+
+2. **Collect Raw IMU Data:**
+   - Write code to read raw data from the IMU sensor. This typically includes acceleration and gyroscope readings.
+
+3. **Implement the Kalman Filter:**
+   - Apply the Kalman filter to the raw data to reduce noise and improve accuracy.
+
+### Using the Code from the Repository
+
+We have provided a comprehensive example of collecting IMU data and applying a Kalman filter in our repository. To use this code, follow these steps:
+
+
+
+2. **Navigate to the IMU Data Collection Directory:**
+   ```sh
+   cd Space_Station_snt/imu_data.cpp
+   ```
+
+3. **Upload the Code to Your Microcontroller:**
+   Open the provided Arduino code in the `imu_data_collection` directory using the Arduino IDE and upload it to your microcontroller.
+
+### Example Workflow
+
+1. **Reading IMU Data:**
+   - Initialize the IMU sensor.
+   - Read acceleration and gyroscope data from the sensor.
+
+2. **Applying the Kalman Filter:**
+   - Initialize the Kalman filter parameters.
+   - Continuously read IMU data and apply the Kalman filter to get filtered data.
+
+### Conclusion
+
+Collecting raw data from the IMU and applying a Kalman filter is crucial for accurate and reliable sensor measurements in our robotic system. By implementing this process, we can significantly reduce noise and obtain precise data for our Space Station project. For the complete code and detailed instructions, please refer to the [repository](https://github.com/Shivansh-gupta2005/Space_Station_snt-.git).
