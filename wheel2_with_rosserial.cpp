@@ -73,7 +73,7 @@ void loop() {
   prevT = currT;
 
   // Convert count/s to RPM
-  float v1 = velocity1 / 420.0 * 60.0;
+  float v1 = velocity1 / 375.0 * 60.0;
 
   // Set a target
   float vt = target_velocity; // Use the target velocity received from ROS
