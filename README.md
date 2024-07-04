@@ -304,6 +304,80 @@ ROS Noetic provides tools and libraries for building and simulating robots. This
 
 ### Conclusion
 
-By following these steps, you will have a fully functional ROS Noetic installation on your Ubuntu 20.04 system. This setup is essential for developing and testing the robotic applications in the Space Station project. For additional details and troubleshooting, refer to the [official ROS Noetic installation guide](http://wiki.ros.org/noetic/Installation/Ubuntu).
+By following these steps, you will have a fully functional ROS Noetic installation on your Ubuntu 20.04 system. This setup is essential for developing and testing the robotic applications in the Space Station project. For additional details and troubleshooting, refer to the [official ROS Noetic installation guide](http://wiki.ros.org/noetic/Installation/Ubuntu
+
+
+## 4 Omni Wheel Testbot
+
+In this section, we introduce the 4 Omni Wheel Testbot designed and built for the Space Station project. The Testbot is a versatile robotic platform capable of omnidirectional movement, which is crucial for testing and validating control algorithms and integration techniques.
+
+### Overview
+
+The 4 Omni Wheel Testbot is equipped with four omni wheels, each independently powered and controlled. This design allows the Testbot to move in any direction and rotate freely, making it ideal for applications requiring precise maneuverability and agility.
+
+### Features
+
+- **Omni Wheels:** Four omni-directional wheels allow movement in any direction without changing orientation.
+- **Independent Control:** Each wheel is independently controlled, enabling complex movement patterns.
+- **Payload Capacity:** Designed to carry various payloads for testing sensors, actuators, and other components.
+- **Modular Design:** Facilitates easy customization and integration of additional sensors and hardware components.
+
+### Components
+
+- **Omni Wheels:** Specialized wheels with rollers set at 45-degree angles to the wheel's axis.
+- **Motors:** Each wheel is driven by a dedicated motor for independent control.
+- **Microcontroller:** Controls motor drivers and interfaces with external systems.
+- **Frame:** Provides structural support and mounting points for components.
+
+### Usage
+
+The Testbot serves as a platform for testing and developing robotics applications, including:
+
+- **Control Algorithms:** Implementing and fine-tuning algorithms for navigation and obstacle avoidance.
+- **Sensor Integration:** Testing and calibrating sensors such as IMUs, cameras, and distance sensors.
+- **Software Development:** Writing and debugging software for autonomous navigation and task execution.
+
+### Repository Structure
+
+The repository for the 4 Omni Wheel Testbot contains:
+- **CAD Designs:** CAD files for the mechanical design of the Testbot.
+- **Control Software:** Example code and libraries for controlling the Testbot's movement.
+- **Documentation:** Detailed documentation on assembly, operation, and maintenance.
+
+### Getting Started
+
+To get started with the 4 Omni Wheel Testbot, follow these steps:
+
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/Shivansh-gupta2005/Space_Station_snt-.git
+   cd space-station/
+   ls
+   wheel1.cpp wheel2.cpp wheel3.cpp wheel4.cpp
+   ```
+
+2. **Setup and Assembly:**
+   - Follow the assembly instructions provided in the `Documentation` directory.
+   - Ensure all components are securely mounted and connected according to the design specifications.
+
+3. **Upload Control Software:**
+   - Upload the provided control software to the microcontroller onboard the Testbot.
+   - Adjust configurations as needed for your specific setup.
+
+4. **Testing and Validation:**
+   - Conduct initial tests to ensure all wheels respond correctly to commands.
+   - Test different movement patterns and verify the Testbot's omnidirectional capabilities.
+
+### Contributing
+
+We welcome contributions to the 4 Omni Wheel Testbot project. Feel free to submit issues, feature requests, or pull requests to help improve and expand the functionality of the Testbot platform.
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+### Conclusion
+
+The 4 Omni Wheel Testbot is a powerful tool for developing and testing robotics applications within the Space Station project. Its omnidirectional movement capabilities and modular design make it suitable for a wide range of experimental and educational purposes in robotics. For further details and updates, please refer to the [repository](https://github.com/Shivansh-gupta2005/Space_Station_snt-.git)
 
 
