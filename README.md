@@ -456,3 +456,62 @@ ROS provides a flexible framework for robotics software development, while Ardui
 ### Conclusion
 
 Integrating Arduino IDE with ROS enables robust control and communication capabilities in robotic applications. By following these steps, you can effectively integrate Arduino-based hardware with ROS for developing advanced robotics projects, such as those within the Space Station initiative. For further details and updates, please refer to the [official ROS documentation](http://wiki.ros.org/rosserial).
+
+
+## Controlling Velocity of 4 Wheels Based on IMU Data
+
+In this section, we describe the implementation of the `velocity_distributor_node` responsible for controlling the velocity of the 4-wheel TESTBOT based on IMU data. This node plays a crucial role in interpreting sensor information and distributing velocity commands to achieve desired movement and stability.
+
+### Overview
+
+The `velocity_distributor_node` utilizes data from the IMU (Inertial Measurement Unit) to calculate and distribute velocity commands to each wheel of the TESTBOT. This approach ensures coordinated movement and responsiveness, essential for navigating and maintaining stability in various environments.
+
+### Components
+
+- **IMU Sensor:** Provides data on acceleration and angular velocity.
+- **ROS (Robot Operating System):** Middleware for robotics software development.
+- **ROS Messages:** Custom messages for transmitting velocity commands.
+- **Control Algorithms:** Implemented to interpret IMU data and calculate wheel velocities.
+
+### Implementation Details
+
+1. **IMU Data Processing:**
+   - Subscribe to IMU data messages (`sensor_msgs/Imu`) published on a ROS topic.
+   - Extract relevant data such as linear acceleration and angular velocity.
+
+2. **Velocity Calculation:**
+   - Use control algorithms (e.g., PID controllers) to interpret IMU data and calculate desired velocities for each wheel.
+   - Adjust velocity distribution based on robot orientation and movement goals.
+
+3. **Publish Velocity Commands:**
+   - Publish velocity commands (`geometry_msgs/Twist`) to individual wheel controllers or motor drivers.
+   - Ensure synchronization and coordination between all four wheels for smooth movement.
+
+### Example Workflow
+
+- **Launch `velocity_distributor_node.py`:**
+  ```sh
+  rosrun Space_station_snt velocity_distributor_node
+  ```
+
+- **Subscribe to IMU Data:**
+  - Implement a subscriber to receive IMU data from the sensor topic.
+  - Process and interpret IMU data to extract orientation and velocity information.
+
+- **Calculate Wheel Velocities:**
+  - Implement algorithms to convert IMU data into velocity commands.
+  - Consider factors like robot orientation, environmental conditions, and desired movement behavior.
+
+- **Publish Velocity Commands:**
+  - Publish calculated velocity commands to respective wheel controllers using ROS topics.
+  - Ensure real-time communication and responsiveness to maintain stability and accuracy.
+
+### Testing and Validation
+
+- **Simulation and Real-World Testing:**
+  - Conduct simulations to validate velocity control algorithms and behavior under different scenarios.
+  - Perform real-world testing to verify performance and fine-tune parameters if necessary.
+
+### Conclusion
+
+The `velocity_distributor_node` is essential for controlling the velocity of the 4-wheel TESTBOT based on IMU data, ensuring precise and stable movement in the Space Station project. By implementing this node and integrating it with ROS, you can effectively harness sensor data to achieve desired robotic behaviors and navigation capabilities. For further details and updates, please refer to your project's documentation and the [official ROS documentation](http://wiki.ros.org/ROS/StartGuide).
