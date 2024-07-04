@@ -212,3 +212,98 @@ Dual booting enables you to have both Windows and Ubuntu installed on the same c
 Dual booting Windows and Ubuntu 20.04 provides a flexible development environment, allowing you to leverage the strengths of both operating systems. By following this guide, you can set up a dual-boot system to facilitate your work on the Space Station project. For additional details and troubleshooting, please refer to the [official Ubuntu documentation](https://help.ubuntu.com/community/WindowsDualBoot).
 
 
+## Installing ROS Noetic
+
+In this section, we provide a step-by-step guide to install ROS Noetic on Ubuntu 20.04. ROS (Robot Operating System) is a flexible framework for writing robot software, and ROS Noetic is the latest LTS (Long Term Support) release.
+
+### Overview
+
+ROS Noetic provides tools and libraries for building and simulating robots. This installation guide ensures that you have a working ROS Noetic environment on your Ubuntu 20.04 system, which is essential for developing and testing robotic applications in the Space Station project.
+
+### Prerequisites
+
+- A computer running Ubuntu 20.04.
+- Basic knowledge of using the terminal.
+
+### Steps to Install ROS Noetic
+
+1. **Setup Your Sources.list:**
+   - Open a terminal and configure your Ubuntu repositories to allow "restricted," "universe," and "multiverse."
+   ```sh
+   sudo add-apt-repository restricted
+   sudo add-apt-repository universe
+   sudo add-apt-repository multiverse
+   ```
+
+2. **Setup Your Keys:**
+   - Add the ROS package repository to your sources list.
+   ```sh
+   sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-noetic.list'
+   ```
+   - Set up your keys.
+   ```sh
+   sudo apt update
+   sudo apt install curl
+   curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+   ```
+
+3. **Installation:**
+   - Update your package list.
+   ```sh
+   sudo apt update
+   ```
+   - Install ROS Noetic Desktop-Full.
+   ```sh
+   sudo apt install ros-noetic-desktop-full
+   ```
+
+4. **Environment Setup:**
+   - Add the ROS environment variables to your bash session.
+   ```sh
+   echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+5. **Dependencies for Building Packages:**
+   - Install dependencies for building ROS packages.
+   ```sh
+   sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+   ```
+
+6. **Initialize rosdep:**
+   - Initialize `rosdep` to easily install system dependencies for source you want to compile and is required by most ROS packages.
+   ```sh
+   sudo apt install python3-rosdep
+   sudo rosdep init
+   rosdep update
+   ```
+
+### Verifying the Installation
+
+1. **Check the ROS Installation:**
+   - Ensure that the installation was successful by running the following command:
+   ```sh
+   roscore
+   ```
+   - This should start the ROS master. If you see messages about the ROS master running, then the installation was successful.
+
+2. **Create and Build a Catkin Workspace:**
+   - Create a catkin workspace and build a sample package to verify the setup.
+   ```sh
+   mkdir -p ~/catkin_ws/src
+   cd ~/catkin_ws/
+   catkin_make
+   source devel/setup.bash
+   ```
+
+3. **Run a Sample Node:**
+   - Test your installation by running a simple ROS node.
+   ```sh
+   rosrun turtlesim turtlesim_node
+   ```
+
+### Conclusion
+
+By following these steps, you will have a fully functional ROS Noetic installation on your Ubuntu 20.04 system. This setup is essential for developing and testing the robotic applications in the Space Station project. For additional details and troubleshooting, refer to the [official ROS Noetic installation guide](http://wiki.ros.org/noetic/Installation/Ubuntu).
+
+
