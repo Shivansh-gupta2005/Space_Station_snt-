@@ -13,15 +13,15 @@ def calculation(msg: Float64):
     
     current_heading_float = float(msg.data)  # Convert message data to float
 
-    Kp = 0.5
-    Ki = 0.01
-    Kd = 0.1
+    Kp = 1.0
+    Ki = 0.00
+    Kd = 0.0
 
     # Perform PID control to get correction value
-    correction = pidControl(desired_heading, current_heading_float, Kp, Ki, Kd, 0.01)
+    correction = pidControl(0, current_heading_float, Kp, Ki, Kd, 0.01)
     
     target_speeds = [0.0] * 4
-    base_speed = 0.5
+    base_speed = desired_heading
     for i in range(4):
         speed_change = correction 
         if i % 2 == 0:
@@ -64,7 +64,7 @@ def handle_set_target(req):
 if __name__ == '__main__':
     rospy.init_node("target_velocity")
     
-    sub = rospy.Subscriber("std_msgs", Float64, calculation)
+    sub = rospy.Subscriber("yaw", Float64, calculation)
     pub = rospy.Publisher("target_vels", Float64MultiArray, queue_size=10)
     
     service = rospy.Service('set_target', SetTarget, handle_set_target)
