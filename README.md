@@ -10,3 +10,17 @@
 - [Integrating Arduino IDE and ROS](#integrating-arduino-ide-and-ros)
 - [Controlling of TESTBOT](#controlling-of-testbot)
 - [License Info](#license-info)
+
+- ## Introduction
+
+Welcome to the Space Station project,   Robotics Club at IIT Kanpur. This project aims to develop a  robotic system capable of precise motion control and efficient data collection using a imu sensor and encoder and pid control.
+
+The project involves multiple aspects of robotics, including:
+
+- **Position and Velocity Control of DC Motors:** Utilizing PID controllers to achieve accurate motor control.
+- **Sensor Data Processing:** Collecting raw data from an Inertial Measurement Unit (IMU) and applying a Kalman filter for noise reduction and improved measurement accuracy.
+- **System Setup:** Dual booting systems with Windows and Ubuntu 20.04 to facilitate development and installing ROS Noetic for robot control and simulation.
+- **Hardware Development:** Designing and building a 4 Omni Wheel Testbot to test various control algorithms and integration techniques.
+- **Software Integration:** Integrating Arduino IDE with ROS for seamless hardware control and communication.
+
+This README provides a comprehensive guide to the various components of the project, including detailed instructions, code examples, and troubleshooting tips. We welcome contributions from the community and encourage you to get involved in the development of this exciting project.
